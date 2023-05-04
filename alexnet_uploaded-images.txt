@@ -1,0 +1,156 @@
+this file is get_pet_labels.py
+Filename:  Miniature_schnauzer_06884.jpg 	Pet label:  miniature schnauzer
+Filename:  Golden_retriever_05257.jpg 	Pet label:  golden retriever
+Filename:  Poodle_07927.jpg 	Pet label:  poodle
+Filename:  polar_bear_04.jpg 	Pet label:  polar bear
+Filename:  Golden_retriever_05223.jpg 	Pet label:  golden retriever
+Filename:  Great_pyrenees_05367.jpg 	Pet label:  great pyrenees
+Filename:  Boston_terrier_02285.jpg 	Pet label:  boston terrier
+Filename:  Golden_retriever_05195.jpg 	Pet label:  golden retriever
+Filename:  Basenji_00963.jpg 	Pet label:  basenji
+Filename:  Rabbit_002.jpg 	Pet label:  rabbit
+Filename:  Basenji_00974.jpg 	Pet label:  basenji
+Filename:  Great_pyrenees_05435.jpg 	Pet label:  great pyrenees
+Filename:  German_shorthaired_pointer_04986.jpg 	Pet label:  german shorthaired pointer
+Filename:  Boston_terrier_02303.jpg 	Pet label:  boston terrier
+Filename:  Beagle_01141.jpg 	Pet label:  beagle
+Filename:  fox_squirrel_01.jpg 	Pet label:  fox squirrel
+Filename:  Boxer_02426.jpg 	Pet label:  boxer
+Filename:  Beagle_01125.jpg 	Pet label:  beagle
+Filename:  Dalmatian_04017.jpg 	Pet label:  dalmatian
+Filename:  Cocker_spaniel_03750.jpg 	Pet label:  cocker spaniel
+Filename:  gecko_80.jpg 	Pet label:  gecko
+Filename:  Saint_bernard_08036.jpg 	Pet label:  saint bernard
+Filename:  great_horned_owl_02.jpg 	Pet label:  great horned owl
+Filename:  Boston_terrier_02259.jpg 	Pet label:  boston terrier
+Filename:  Great_dane_05320.jpg 	Pet label:  great dane
+Filename:  cat_07.jpg 	Pet label:  cat
+Filename:  Poodle_07956.jpg 	Pet label:  poodle
+Filename:  gecko_02.jpg 	Pet label:  gecko
+Filename:  Basset_hound_01034.jpg 	Pet label:  basset hound
+Filename:  German_shepherd_dog_04931.jpg 	Pet label:  german shepherd dog
+Filename:  Saint_bernard_08010.jpg 	Pet label:  saint bernard
+Filename:  German_shepherd_dog_04890.jpg 	Pet label:  german shepherd dog
+Filename:  Beagle_01170.jpg 	Pet label:  beagle
+Filename:  Dalmatian_04037.jpg 	Pet label:  dalmatian
+Filename:  cat_01.jpg 	Pet label:  cat
+Filename:  Collie_03797.jpg 	Pet label:  collie
+Filename:  skunk_029.jpg 	Pet label:  skunk
+Filename:  cat_02.jpg 	Pet label:  cat
+Filename:  Dalmatian_04068.jpg 	Pet label:  dalmatian
+Filename:  Golden_retriever_05182.jpg 	Pet label:  golden retriever
+this file is get_pet_labels.py ended....======================
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_01.jpg  label:                        dog
+ 2 key:              Black_bear_01.jpg  label:                 black bear
+ 3 key:                    Frog_01.jpg  label:                       frog
+ 4 key:                     Dog_02.jpg  label:                        dog
+classify_image function started....
+classify_image function ended....
+==================================
+
+start classify_images.py check
+Filename:  Dog_01.jpg
+Pet label:  dog
+Classifier label:  yorkshire terrier
+Match (1 = match, 0 = no match):  0
+
+
+Filename:  Black_bear_01.jpg
+Pet label:  black bear
+Classifier label:  american black bear, black bear, ursus americanus, euarctos americanus
+Match (1 = match, 0 = no match):  1
+
+
+Filename:  Frog_01.jpg
+Pet label:  frog
+Classifier label:  tree frog, tree-frog
+Match (1 = match, 0 = no match):  0
+
+
+Filename:  Dog_02.jpg
+Pet label:  dog
+Classifier label:  yorkshire terrier
+Match (1 = match, 0 = no match):  0
+
+
+end classify_images.py check 
+
+     MATCH:
+
+             Black_bear_01.jpg: 
+Real:                 black bear   Classifier: american black bear, black bear, ursus americanus, euarctos americanus
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:              yorkshire terrier
+
+                   Frog_01.jpg: 
+Real:                       frog   Classifier:           tree frog, tree-frog
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:              yorkshire terrier
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+==== adust_results4_isadog.py started ==============
+
+result_dic's value
+{'Dog_01.jpg': ['dog', 'yorkshire terrier', 0, 1, 1], 'Black_bear_01.jpg': ['black bear', 'american black bear, black bear, ursus americanus, euarctos americanus', 1, 0, 0], 'Frog_01.jpg': ['frog', 'tree frog, tree-frog', 0, 0, 0], 'Dog_02.jpg': ['dog', 'yorkshire terrier', 0, 1, 1]}
+==== adust_results4_isadog.py ended ==============
+
+     MATCH:
+
+             Black_bear_01.jpg: 
+Real:                 black bear   Classifier: american black bear, black bear, ursus americanus, euarctos americanus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:              yorkshire terrier  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                   Frog_01.jpg: 
+Real:                       frog   Classifier:           tree frog, tree-frog  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:              yorkshire terrier  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+calcuates_results_stats started ============================
+{'n_dogs_img': 2, 'n_match': 1, 'n_correct_dogs': 2, 'n_correct_notdogs': 2, 'n_correct_breed': 0, 'n_images': 4, 'n_notdogs_img': 2, 'pct_match': 25.0, 'pct_correct_dogs': 100.0, 'pct_correct_breed': 0.0, 'pct_correct_notdogs': 100.0}
+calcuates_results_stats ended ============================
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+ 
+pct_match           :  25.0
+pct_correct_dogs    : 100.0
+pct_correct_breed   :   0.0
+pct_correct_notdogs : 100.0
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:              yorkshire terrier
+Real:                        dog   Classifier:              yorkshire terrier
+
+** Total Elapsed Runtime: 0:0:1
